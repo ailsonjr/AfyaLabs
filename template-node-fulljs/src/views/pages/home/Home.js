@@ -13,11 +13,15 @@ let Home = {
     const jokes = await getRandonJoke()
       let view = /*html*/`
           <div>
-            <h1>Primeira página!</h1>
-            <img src=${jokes.icon_url}>
-            <p> ${jokes.value} <p>
-          </div>
-          <div>
+            <h1>Piadas aleatórias de Chuck Norris</h1>
+            <div class="container">
+              <img id="image" src=${jokes.icon_url}>
+            </div>
+            </div>
+            <div>
+            <h2>Formulário usando Webhook</h2>
+            <p>O mesmo é usado apenas para efeito de demostração<p>
+            <p>Quando clicado em enviar, salva as informações no Webhook<p>
             <form id="form">
               <input type="text" id="name" placeholder="name"/>
               <input type="text" id="email" placeholder="email"/>
