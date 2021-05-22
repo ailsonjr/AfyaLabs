@@ -9,6 +9,11 @@
       "name": "Banana",
       "price": 10,
       "id": "7o3Du2i"
+    },
+    {
+      "name": "Maça",
+      "price": 5,
+      "id": "d4A0ieG"
     }
   ],
   "datacontent": [
