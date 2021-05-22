@@ -1,9 +1,8 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import Home from './views/pages/Home';
 
 const App: React.FC = () => {
-  return <div />;
+  return <Home/>;
 }
 
 export default App;
