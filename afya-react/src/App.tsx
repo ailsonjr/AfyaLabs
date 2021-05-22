@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import { uuid } from "uuidv4";
+
+import { api } from "./services/api";
+
+interface IData{
+  id: number,
+  name: string,
+  price: number
+}
+
+const App: React.FC = () => {
+  const [data, setData] = useState<IData[]>([]);
+  const [fruta, setFruta] = useState<string>('');
+  const [frutaValue, setFrutaValue] = useState<any>();
+
+  useEffect(() => {
+    api.get('data').then(
+      response => {
+        setData(response.data)
+      }
+    )
+  }, []);
+
+  const convertToCurrency = useCallback(
+    (value: number) => Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(value),
+    [],
   );
+
+  const addToApi = useCallback(
+    () => {
+      api.post('data', {
+        id: uuid,
+        name: fruta,
+        price: frutaValue
+      }).then(
+        response => alert('Tudo certo'))
+        .catch( e => 'Erro')
+    }, [fruta, frutaValue],
+  );
+
+  return (
+    <div>
+      <h1>Hello</h1>
+
+      <ul>
+        {data.map(fruta => (
+          <li key={fruta.id}>
+            {fruta.name} | {convertToCurrency(fruta.price)}
+          </li>
+        ))}
+      </ul>
+      <hr />
+      <h1>{fruta}</h1>
+      <hr />
+      <input type="text" onChange={ e => setFruta(e.target.value)} placeholder="Nome da fruta" />
+      <input type="number" onChange={e => setFrutaValue(parseFloat(e.target.value))} placeholder="Preço" />
+      
+      <button onClick={ addToApi }>Adicionar</button>
+    </div>
+  )
 }
 
 export default App;
