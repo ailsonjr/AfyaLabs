@@ -1,6 +1,7 @@
 // const rl = require('./interface');
 
-const MachineOptions = require("./controller/class");
+// const MachineOptions = require("./controller/class/machine");
+const User = require("./controller/class/user");
 const options = require("./data");
 
 // rl.question('Você está gostando do POO? ', resposta => {
@@ -8,6 +9,7 @@ const options = require("./data");
 //   rl.close();
 // });
 
-let sorteio = new MachineOptions({ opt: options }).sort();
+// let sorteio = new MachineOptions({ opt: options }).sort();
+let usuario = new User({ opt: options, name: 'Maria', selected: 'Papel' }).game();
 
-console.log(sorteio);
+console.log(usuario);
