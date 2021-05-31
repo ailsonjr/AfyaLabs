@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(9, 76, 219);
+  font-family: 'Roboto', sans-serif;
+  color: aliceblue;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 10px;
+  color: crimson;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50%;
+  width: 200px;
+}
+
+#joke {
+  margin: 10px
+}
+
+input {
+  padding: 15px;
+  margin: 5px;
+  width: 50%;
+  background-color: royalblue;
+}
+
+#form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+}
