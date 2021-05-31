@@ -1,5 +1,5 @@
 /** Imports **/
-import Utils from './service/Utils';
+import Utils from '../src/service/Utils';
 
 /** Pages **/
 import { error404, home } from './views/pages/index';
