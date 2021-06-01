@@ -1,17 +1,22 @@
+import HomeSectionOne from "../../components/section/homeSectionOne";
+import HomeSectionTwo from "../../components/section/homeSectionTwo";
+
 let Home = {
   is_private: false,
 
   render: async () => {
-      let view = `
+    let view = `
           <div>
-            <h1>Home</div>
+            <h1>Início</div>
+            ${HomeSectionOne}
+            ${HomeSectionTwo}
           </div>
       `;
 
-      return view
+    return view
   },
 
-  after_render: async () => {}
+  after_render: async () => { }
 }
 
 export default Home;
