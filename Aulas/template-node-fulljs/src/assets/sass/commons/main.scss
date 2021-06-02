@@ -8,6 +8,10 @@ sans-serif;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $backGroundBlack;
   color: $fontColorWhite;
@@ -16,6 +20,29 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+p,
+b,
+span {
+  font-family: $fontFamilyDefault;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.main-left {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
+.footer-contain {
+  margin-top: calc(10px -220px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: $fontFamilyDefault;
 }

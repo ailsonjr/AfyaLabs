@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -12,17 +16,82 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+p,
+b,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.main-left {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
+.footer-contain {
+  margin-top: calc(10px -220px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Roboto", sans-serif;
 }
 
 .section {
-  height: 100vh;
   width: 100%;
 }
 
 .background--one {
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background--one .block-section--one {
+  display: block;
+  text-align: center;
+}
+.background--one .block-section--one h1 {
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+.background--two {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 120vh;
+  display: flex;
+}
+.background--two .footer-contain {
+  margin-top: calc(10px -220px);
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.background--two .block-section--two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.background--two .block-section--two .text-block--two {
+  width: 40%;
+  height: 100%;
+}
+.background--two .block-section--two .text-block--two img {
+  margin: 90px 0px 0px 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
