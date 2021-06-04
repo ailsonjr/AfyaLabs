@@ -1,0 +1,116 @@
+body {
+  background-color: rgb(180, 180, 180);
+  font-family: sans-serif;
+}
+
+h1 {
+  animation-name: mudacor;
+  animation-duration: 5s;
+  color: red;
+}
+
+@keyframes mudacor {
+  from {color: yellow;}
+  to {color: red;}
+}
+
+#cabecalho {
+  background-color: cadetblue;
+  border: black 1px solid;
+  border-radius: 10px;
+  box-shadow: black 2px 2px 5px;
+  padding-left: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#conteudo {
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2%;
+}
+
+a {
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: unset;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+#imagem-loja {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#tituloDestaque {
+  display: flex;
+  justify-content: center;
+  text-shadow: gray 1px 1px 5px;
+}
+
+#produtos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.produtosDestaque {
+  align-items: center;
+  border: gray 1 px solid;
+  box-shadow: gray 2px 2px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 30%;
+}
+
+.imgDestaque {
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#rodape {
+  background-color: rgb(110,110,100);
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+#redessociais {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+#email {
+  display: flex;
+  flex-direction: column;
+}
+
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+button {
+  height: 30px;  
+  border: rgb(80, 80, 250) 2px solid;
+  border-radius: 5px;
+}
