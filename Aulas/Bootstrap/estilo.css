@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(180, 180, 180);
+}
+
+h3,
+h5,
+h6 {
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+}
+
+#logoLoja {
+  width: 100%;
+}
+
+#imagemLogo {
+  margin-bottom: 20px;
+}
+
+#tituloDestaques {
+  margin-bottom: 30px;
+}
+
+.card-img-top {
+  width: 25%;
+  margin: auto;
+}
+
+#rodape{
+  color: white;
+  background-color: darkgray;
+  padding-top: 50px;
+}
